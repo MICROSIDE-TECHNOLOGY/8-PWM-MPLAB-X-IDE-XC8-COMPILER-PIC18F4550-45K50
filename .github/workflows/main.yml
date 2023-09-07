@@ -1,0 +1,31 @@
+on: [push]
+
+jobs:
+  gist-sync:
+    name: gist-sync
+    runs-on: ubuntu-latest
+    steps:
+    #PIC18F4550
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: vhperaltaj/gist-sync-action@v1.0.0
+        id: PIC18F4550
+        with:
+          auth: ${{ secrets.GIST_TOKEN }}
+          gist_url: https://gist.github.com/microside-mx/ba2fdf8c604ce01b4534929c895949eb
+          gist_title: 8-PWM-mplab-4550.c
+          gist_description: Prácticas MPLABX
+          github_file: Proyecto/PIC18F4550/8_PWM.X/main.c
+          file_encoding: ISO-8859-1
+    #PIC18F45K50
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: vhperaltaj/gist-sync-action@v1.0.0
+        id: PIC18F45K50
+        with:
+          auth: ${{ secrets.GIST_TOKEN }}
+          gist_url: https://gist.github.com/microside-mx/c271bd6212bd0a43369ab8890d8d90ec
+          gist_title: 8-PWM-mplab.c
+          gist_description: Prácticas MPLABX
+          github_file: Proyecto/PIC18F45K50/8_PWM.X/main.c
+          file_encoding: ISO-8859-1
