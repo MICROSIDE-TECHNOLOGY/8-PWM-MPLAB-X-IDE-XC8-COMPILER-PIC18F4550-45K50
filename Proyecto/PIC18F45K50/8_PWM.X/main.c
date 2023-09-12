@@ -59,6 +59,3 @@ void main( void )
         }
     }
 }
-/**
- End of File
-*/

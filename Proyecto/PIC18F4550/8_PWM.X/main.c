@@ -74,7 +74,7 @@ void main( void )
 {
     uint16_t Duty;
     InitPorts();                        // Configura el pin C2 como salida
-    PWMinit();                          // Configura el mÃ³dulo PWM
+    PWMinit();                          // Configura el módulo PWM
     while ( 1 ) {
         for ( Duty = 0; Duty < 1020; Duty++ ) {
             PWM2_LoadDutyValue( Duty ); // Asigna el valor del Duty al PWM
